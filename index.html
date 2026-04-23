@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pinnacle Educational Consultants in Mbarara - coaching services, timetables, and learner support.">
+  <meta name="keywords" content="pinnacle, educational consultants, mbarara, coaching, timetable">
+  <meta name="author" content="Adrian Asasira">
+  <title>Pinnacle Educational Consultants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="site-shell">
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="About us.html">About Us</a>
+      <a href="Rules.html">Rules</a>
+      <a href="Textbooks.html">Textbooks</a>
+    </nav>
+
+    <section class="hero-card">
+      <h1>Pinnacle Educational Consultants</h1>
+      <p class="muted">Better Than The Best</p>
+    </section>
+
+    <section class="panel">
+      <h2>Welcome</h2>
+      <p>
+        Pinnacle Educational Consultants is a secondary school coaching centre in Mbarara City.
+        We provide learner support in both sciences and humanities for O-Level and A-Level students.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="About us.html">More About Us</a>
+        <a class="btn btn-secondary" href="Rules.html">Rules and Regulations</a>
+        <a class="btn btn-danger" href="https://www.google.com/maps/place/Uganda+Martyrs+Primary+School,+Mbarara/" target="_blank" rel="noopener noreferrer">Our Location</a>
+
+        <div id="timetableDropdown" class="dropdown">
+          <button id="timetableButton" class="btn btn-primary" type="button">Open Timetables</button>
+          <div class="dropdown-content">
+            <a href="S.1.html">S.1 Timetable</a>
+            <a href="S.2.html">S.2 Timetable</a>
+            <a href="S.3.html">S.3 Timetable</a>
+            <a href="S.4.html">S.4 Timetable</a>
+            <a href="S.5.html">S.5 Timetable</a>
+            <a href="S.6.html">S.6 Timetable</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Class Schedule</h3>
+          <p>Weekdays: 8:00 AM - 4:00 PM<br>Saturdays: 8:00 AM - 1:00 PM</p>
+        </div>
+        <div class="panel">
+          <h3>Learning Focus</h3>
+          <p>Strong discipline, practical coaching, and learner-centered support for top results.</p>
+        </div>
+        <div class="panel">
+          <h3>Uganda Exam Readiness</h3>
+          <p>Coaching approach aligned to UNEB expectations: revision drills, timed tests, and practical support.</p>
+        </div>
+        <div class="panel">
+          <h3>Textbooks Hub</h3>
+          <p>Book links will be added soon for every class and subject.</p>
+          <a class="btn btn-secondary" href="Textbooks.html">Open Textbooks</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-panel">
+      <p><strong>Contact:</strong> 0781234867 / 0755997895</p>
+      <p><strong>Email:</strong> pinnacleeducationalconsultants@gmail.com</p>
+      <footer class="site-footer">&copy; <span id="year"></span> Pinnacle Educational Consultants. All rights reserved.</footer>
+    </section>
+  </main>
+
+  <script>
+    const dropdown = document.getElementById("timetableDropdown");
+    const timetableButton = document.getElementById("timetableButton");
+    const year = document.getElementById("year");
+
+    year.textContent = new Date().getFullYear();
+
+    timetableButton.addEventListener("click", function () {
+      dropdown.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
