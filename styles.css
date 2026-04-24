@@ -31,6 +31,7 @@ body {
 body.home-page {
   background:
     linear-gradient(rgba(6, 12, 27, 0.76), rgba(6, 12, 27, 0.8)),
+    url("logo.jpeg") center center / cover no-repeat fixed,
     url("logo.png") center center / cover no-repeat fixed,
     radial-gradient(1200px 700px at 15% -20%, #334f99 0%, rgba(51, 79, 153, 0) 60%),
     radial-gradient(900px 500px at 100% 0%, #0f766e 0%, rgba(15, 118, 110, 0) 65%),
@@ -333,6 +334,89 @@ tr:nth-child(even) td {
   margin-top: 8px;
   font-size: 0.88rem;
   color: #c9d7ff;
+}
+
+.payment-section {
+  margin-top: 20px;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 14px 0 20px;
+}
+
+.payment-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(7, 13, 26, 0.5);
+  padding: 14px;
+}
+
+.payment-amount {
+  margin: 6px 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.method-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(7, 13, 26, 0.5);
+  padding: 12px;
+}
+
+.method-card img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 6px;
+}
+
+.method-card h4 {
+  margin: 0 0 4px;
+}
+
+.method-card p {
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #dce6ff;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.copyright {
+  margin-top: 12px;
 }
 
 .quick-actions {
