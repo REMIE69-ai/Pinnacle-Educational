@@ -448,6 +448,99 @@ tr:nth-child(even) td {
   transform: translateY(0) scale(1);
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px) scale(0.99);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.bank-payment-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(700px 220px at 100% -30%, rgba(95, 135, 255, 0.28), transparent 70%),
+    radial-gradient(600px 250px at 0% 130%, rgba(45, 212, 191, 0.22), transparent 68%),
+    var(--surface);
+}
+
+.bank-payment-head h2 {
+  margin-bottom: 8px;
+}
+
+.bank-tag {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #d7fffa;
+  background: rgba(45, 212, 191, 0.18);
+  border: 1px solid rgba(45, 212, 191, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.bank-details-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.bank-detail-card {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(8, 14, 30, 0.58);
+  padding: 12px;
+}
+
+.bank-label {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #c6d4fb;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.bank-value {
+  margin: 6px 0 0;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.bank-account-number {
+  color: #b8f7ea;
+  letter-spacing: 0.03em;
+}
+
+.bank-note-box {
+  margin-top: 14px;
+  border-left: 3px solid rgba(45, 212, 191, 0.8);
+  border-radius: 8px;
+  background: rgba(45, 212, 191, 0.08);
+  padding: 10px 12px;
+}
+
+.bank-note-box p {
+  margin: 0;
+}
+
+.bank-note-muted {
+  margin-top: 6px !important;
+  color: #e2ecff !important;
+  font-size: 0.92rem;
+}
+
 .story-image-wrap {
   position: relative;
   min-height: 360px;

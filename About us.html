@@ -95,11 +95,62 @@
       <p>Study-abroad counselling and documentation support where applicable.</p>
     </section>
 
+    <section class="panel bank-payment-section reveal-on-scroll" style="margin-top: 14px;" id="bank-payment">
+      <div class="bank-payment-head">
+        <p class="bank-tag">Secure Tuition Payment</p>
+        <h2>Bank Payment Option</h2>
+        <p>
+          If you prefer paying through a bank, use the account details below and share your payment proof
+          with the admin team for quick confirmation.
+        </p>
+      </div>
+      <div class="bank-details-grid">
+        <article class="bank-detail-card">
+          <p class="bank-label">Bank Name</p>
+          <p class="bank-value">Centenary Bank</p>
+        </article>
+        <article class="bank-detail-card">
+          <p class="bank-label">Account Name</p>
+          <p class="bank-value">Mugaga Tiberious</p>
+        </article>
+        <article class="bank-detail-card">
+          <p class="bank-label">Account Number</p>
+          <p class="bank-value bank-account-number">32050844100</p>
+        </article>
+      </div>
+      <div class="bank-note-box">
+        <p><strong>Important:</strong> Use your full student name as payment reference where possible.</p>
+        <p class="bank-note-muted">For help, contact: +256 781234867 / +256 755997895</p>
+      </div>
+    </section>
+
     <section class="contact-panel">
       <p><strong>Contact:</strong> +256 781234867 / +256 755997895</p>
       <p><strong>Email:</strong> pinnacleeducationalconsultants@gmail.com</p>
       <p><strong>Location:</strong> Mbarara City</p>
     </section>
   </main>
+  <script>
+    (function () {
+      var revealItems = document.querySelectorAll(".reveal-on-scroll");
+      if (!revealItems.length) return;
+
+      var observer = new IntersectionObserver(
+        function (entries, io) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -40px 0px" }
+      );
+
+      revealItems.forEach(function (item) {
+        observer.observe(item);
+      });
+    })();
+  </script>
 </body>
 </html>
