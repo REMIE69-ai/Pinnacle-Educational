@@ -130,27 +130,6 @@
       <p><strong>Location:</strong> Mbarara City</p>
     </section>
   </main>
-  <script>
-    (function () {
-      var revealItems = document.querySelectorAll(".reveal-on-scroll");
-      if (!revealItems.length) return;
-
-      var observer = new IntersectionObserver(
-        function (entries, io) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2, rootMargin: "0px 0px -40px 0px" }
-      );
-
-      revealItems.forEach(function (item) {
-        observer.observe(item);
-      });
-    })();
-  </script>
+  <script src="home.js"></script>
 </body>
 </html>
